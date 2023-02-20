@@ -14,7 +14,8 @@ FRONTEND INSTALL:
 3. from frontend folder run ...../frontend/ npm install - it will install all frontened dependencies
 4. ..../frontend/ npm start - for starting react project it should run on 3000 port
 
-The backend side you can use as API by making requests to:
+The backend side you can use as API by making requests for
+:
 1.create new user
 3. Login user with jwt token
 3.update user profile 
