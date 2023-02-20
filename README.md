@@ -11,10 +11,10 @@ BACKEND INSTALL:
 FRONTEND INSTALL:
 1. in the root folder, go to /frontend/
 2. got to repository  https://github.com/MaksYig/babe_app-frontend and clone all files to Frontend folder
-3. from frontend folder run ...../frontend/ npm install - it will install all frontened dependencies
+3. from frontend folder run ...../frontend/ npm install - it will install all frontend dependencies
 4. ..../frontend/ npm start - for starting react project it should run on 3000 port
 
-The backend side you can use as API by making requests for
+The backend side you can use as API making requests for
 :
 1. Create new user - POST - http://127.0.0.1:8000/api-auth-djoser/users/ (required fields: email, username, password,re_password)
 2. Login user with jwt token - POST - http://127.0.0.1:8000/api-auth-djoser/token/login/ (required fields: username, password)- will receive TOKEN
