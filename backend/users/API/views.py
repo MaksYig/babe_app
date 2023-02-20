@@ -7,6 +7,7 @@ from rest_framework.response import Response
 class ProfileDetails(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+    permission_classes=[IsAuthenticated]
     lookup_field = 'user'
 
 
