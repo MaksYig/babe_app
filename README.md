@@ -1,4 +1,4 @@
-# BABE_app (Python Frontend and React Backend)
+# BABE_APP (Python Backend and React Frontend)
 Python and React Pet managing app
 BACKEND INSTALL:
 1. Clone this repository to your PC
