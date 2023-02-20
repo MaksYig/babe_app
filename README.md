@@ -16,12 +16,12 @@ FRONTEND INSTALL:
 
 The backend side you can use as API by making requests for
 :
-1.create new user - POST - http://127.0.0.1:8000/api-auth-djoser/users/ (required fields: email, username, password,re_password)
+1. Create new user - POST - http://127.0.0.1:8000/api-auth-djoser/users/ (required fields: email, username, password,re_password)
 2. Login user with jwt token - POST - http://127.0.0.1:8000/api-auth-djoser/token/login/ (required fields: username, password)- will receive TOKEN
-3.update user profile 
+3. Update user profile 
 4. Logout -POST- http://127.0.0.1:8000/api-auth-djoser/token/logout/ (required header:Authorization Token ........)
 5. Get user Info -GET- http://127.0.0.1:8000/api-auth-djoser/users/me/ (required header:Authorization Token ........)
 6. Get profile info by user ID - GET - http://127.0.0.1:8000/api/profiles/<int:id>/  (required header:Authorization Token ........)
-7.create pet member for authorized user 
-8.update and delete pet member for authorized user
-9.see pet member information that includes user (owner) information 
+7. Create pet member for authorized user 
+8. Update and delete pet member for authorized user
+9. See pet member information that includes user (owner) information 
