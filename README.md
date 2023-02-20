@@ -15,4 +15,9 @@ FRONTEND INSTALL:
 4. ..../frontend/ npm start - for starting react project it should run on 3000 port
 
 The backend side you can use as API by making requests to:
-1.
+1.create new user
+3. Login user with jwt token
+3.update user profile 
+4.create pet member for authorized user 
+5.update and delete pet member for authorized user
+6.see pet member information that includes user (owner) information 
