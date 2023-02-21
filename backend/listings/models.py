@@ -19,6 +19,7 @@ class Pet(models.Model):
     pet_color=models.CharField(blank=True,null=True,max_length=100)
     chip_num = models.CharField('Chip Number',max_length=30,blank=True,null=True)
     pet_gender = models.CharField('Gender',max_length=30,blank=True,null=True,choices=gender_choises)
+    
     created_at = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now=True)
     location = models.PointField(blank=True,null=True, srid=4326)
