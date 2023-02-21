@@ -29,6 +29,8 @@ class PetListingID(APIView):
 class CreatePets(generics.CreateAPIView):
     queryset = Pet.objects.all()
     serializer_class = PetSerializer
+    permission_classes=[IsAuthenticated]
+    
 
 class UpdatePet(generics.UpdateAPIView):
     queryset = Pet.objects.all()
@@ -47,18 +49,20 @@ class UpdatePet(generics.UpdateAPIView):
         else:
             return Response({"message": "failed", "details": serializer.errors}) 
         
-class DeletePets(APIView):
-    def delete(self, request, id=None):
-        pet = Pet.objects.get(id=id)
-        pet.delete()
-        return Response({'item_id': id})
-        
-
-""" class DeletePets(generics.DestroyAPIView):
+class DeletePets(generics.DestroyAPIView):
     queryset = Pet.objects.all()
     serializer_class = PetSerializer
+    permission_classes=[IsAuthenticated]
+    lookup_field = 'id'
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
-        self.perform_destroy(instance)
-"""         """ return Response(status=status.HTTP_204_NO_CONTENT) """ """
-        return Response(instance.id) """
+        serializer = self.get_serializer(instance, data=request.data, partial=True)
+        if serializer.is_valid():
+            self.perform_destroy(instance)
+            return Response({"message": "Your pet was deleted successfully",
+                             "data": serializer.data
+                             },status=status.HTTP_200_OK)
+        else:
+            return Response({"message": "failed", "details": serializer.errors}) 
+        
+
