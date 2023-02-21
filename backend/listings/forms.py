@@ -5,7 +5,7 @@ from django.contrib.gis.geos import Point
 class PetForm(forms.ModelForm):
     class Meta:
         model = Pet
-        fields = ['name','age','pet_breed','chip_num','pet_gender','dob','pet_color','pet_disc','owner','created_at','location', 'latitude', 'longitude','pet_image1','pet_image2','pet_image3','qr_code_img']
+        fields = ['name','age','pet_breed','chip_num','pet_gender','dob','pet_color','pet_disc','owner','created_at','location', 'latitude', 'longitude','pet_image1','pet_image2','pet_image3']
     latitude = forms.FloatField()
     longitude = forms.FloatField()
 
