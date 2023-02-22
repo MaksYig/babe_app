@@ -5,7 +5,7 @@ BACKEND INSTALL:
 2. In the main folder create your VENV folder and activate it
 3. Go back to backend folder and install dependences :
   from mainroot/backend/ *** (be sure that you install it when VENV is activated)
-  pip install django pillow djangorestframework djoser 
+  pip install django pillow djangorestframework djoser corsheaders djangorestframework-gis==0.3
 5. From backend folder run migrations
 6. after all backend modules successfully installed, you can runserver command.( it should run on 8000 port
 FRONTEND INSTALL:
