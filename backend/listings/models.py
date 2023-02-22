@@ -3,7 +3,7 @@ from random import choices
 from django.utils import timezone
 from django.contrib.gis.geos import Point
 from users.models import Profile
-
+from medical_pet_app.models import Medical_pet
     
 
 
@@ -25,7 +25,6 @@ class Pet(models.Model):
     pet_image1 = models.ImageField(blank=True,null=True, upload_to="pet_images/%Y/")
     pet_image2 = models.ImageField(blank=True,null=True,upload_to="pet_images/%Y/")
     pet_image3 = models.ImageField(blank=True,null=True,upload_to="pet_images/%Y/")
-
     owner = models.ForeignKey(to=Profile,on_delete=models.CASCADE)
 
     def __str__(self):

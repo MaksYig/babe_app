@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'listings',
     'users',
+    'medical_pet_app',
     'djoser',
 ]
 
