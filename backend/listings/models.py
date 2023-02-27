@@ -12,8 +12,8 @@ class Pet(models.Model):
     
     
     name = models.CharField(max_length=30)
-    age = models.IntegerField(blank=True,null=True)
-    dob = models.DateTimeField('Date of birth:',blank=True, null=True)
+    age = models.FloatField("Age in weeks",blank=True,null=True)
+    dob = models.DateField('Date of birth:',blank=True, null=True)
     pet_breed = models.CharField(max_length=30,blank=True,null=True)
     pet_disc=models.TextField(blank=True,null=True)
     pet_color=models.CharField(blank=True,null=True,max_length=100)
