@@ -2,10 +2,15 @@
 Python and React Pet managing app. 
 BACKEND INSTALL:
 1. Clone this repository to your PC
-2. In the main folder create your VENV folder and activate it
+2. In the root folder create your VENV virtual environment folder and activate virtual environment
+root/ - run  python -m venv --your venvname--
+cd/--your venvname--/Scripts/activate.bat
+after this, in root folder you will have 2 folders backend and venv
 3. Go back to backend folder and install dependences :
-  from mainroot/backend/ *** (be sure that you install it when VENV is activated)
+  from root/backend/ *** (be sure that you install it when VENV is activated)
   pip install django pillow djangorestframework djoser corsheaders djangorestframework-gis==0.3
+4. Need to create PostageSQL db. Change in settings.py username and password for you db.
+In your PostageSQL db need to CREATE EXTENSION postgis 
 5. From backend folder run migrations
 6. after all backend modules successfully installed, you can runserver command.( it should run on 8000 port
 FRONTEND INSTALL:
